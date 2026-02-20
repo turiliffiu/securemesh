@@ -63,20 +63,20 @@ Il portale mostra tutti i nodi disponibili con IP, utenti connessi e stato onlin
 
 ```
 ┌─────────────────────────────────────┐
-│     🔒 SecureMesh                  │
-│     Rete Mesh v3.1                 │
+│     🔒 SecureMesh                   │
+│     Rete Mesh v3.1                  │
 ├─────────────────────────────────────┤
-│ NODE_ALICE         [TU SEI QUI]    │
+│ NODE_ALICE         [TU SEI QUI]     │
 │ ID: 2919469548                      │
 │ IP: 192.168.1.45                    │
 │ Utenti: Mario, Luigi                │
-│ ● Online - Locale    [Apri Chat]   │
+│ ● Online - Locale    [Apri Chat]    │
 ├─────────────────────────────────────┤
 │ NODE_BOB                            │
 │ ID: 2919469549                      │
 │ IP: 192.168.1.46                    │
 │ Utenti: Anna                        │
-│ ● Online - Remoto    [Apri Chat]   │
+│ ● Online - Remoto    [Apri Chat]    │
 └─────────────────────────────────────┘
 ```
 
@@ -139,7 +139,7 @@ brew install python3 git
 ### Setup Automatico (consigliato)
 ```bash
 # Clone repository
-git clone https://github.com/TUO_USERNAME/securemesh.git
+git clone https://github.com/turiliffiu/securemesh.git
 cd securemesh
 
 # Esegui setup automatico
@@ -164,9 +164,9 @@ Vedi [INSTALL.md](INSTALL.md) per istruzioni dettagliate.
 2. Attendi **LED lampeggiante** (3 flash = pronto)
 3. Monitor seriale mostra:
    ```
-   ╔══════════════════════════════════╗
+   ╔═════════════════════════════════╗
    ║  SECUREMESH v3.1 - NICK+CHAT    ║
-   ╚══════════════════════════════════╝
+   ╚═════════════════════════════════╝
    ✅ Mesh OK!
    ✅ DNS OK! Captive portal attivo
    ✅ Pronto!
