@@ -1,0 +1,153 @@
+# SecureMesh - .gitignore
+
+# ============================================
+# PlatformIO
+# ============================================
+
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/
+
+# Build files
+*.bin
+*.elf
+*.hex
+*.map
+
+# ============================================
+# Python Virtual Environment
+# ============================================
+
+venv/
+env/
+ENV/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ============================================
+# Backup & Temporanei
+# ============================================
+
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Archivi backup
+*.tar.gz
+*.zip
+*.7z
+
+# Esclude backup nella root ma mantieni funzionanti/
+/securemesh_backup_*.tar.gz
+
+# ============================================
+# IDE & Editors
+# ============================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (CLion, PyCharm)
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+
+# ============================================
+# Sistema
+# ============================================
+
+# Linux
+.directory
+.Trash-*/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================
+# Logs & Debug
+# ============================================
+
+*.log
+debug.log
+*.out
+
+# Monitor output
+monitor_output.txt
+
+# ============================================
+# Secrets & Config Locale
+# ============================================
+
+# Config locale (non committare credenziali!)
+config_local.h
+secrets.h
+credentials.ini
+
+# ============================================
+# Test & Coverage
+# ============================================
+
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ============================================
+# Documenti Generati
+# ============================================
+
+# Doxygen
+docs/html/
+docs/latex/
+Doxyfile.bak
+
+# ============================================
+# File da MANTENERE (! = escludi dall'ignore)
+# ============================================
+
+# Mantieni firmware funzionanti
+!funzionanti/*.cpp
+
+# Mantieni README template nelle directory
+!include/README
+!test/README
+
+# Mantieni script setup
+!setup.sh
+
+# Mantieni documentazione
+!*.md
+!LICENSE
