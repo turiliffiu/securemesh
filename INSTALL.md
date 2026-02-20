@@ -115,7 +115,7 @@ Get-WmiObject Win32_SerialPort | Select-Object Name,DeviceID
 
 ```bash
 # Clone da GitHub
-git clone https://github.com/TUO_USERNAME/securemesh.git
+git clone https://github.com/turiliffiu/securemesh.git
 cd securemesh
 
 # Verifica contenuto
