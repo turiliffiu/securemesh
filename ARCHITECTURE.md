@@ -80,19 +80,19 @@ SecureMesh è un sistema di comunicazione mesh decentralizzato basato su ESP8266
 ### Diagramma Livelli
 
 ```
-┌────────────────────────────────────────────────┐
-│           Browser (Client)                     │
+┌───────────────────────────────────────────────┐
+│           Browser (Client)                    │
 │  ┌──────────────────────────────────────────┐ │
 │  │  HTML + CSS + JavaScript                 │ │
 │  │  - Modal nickname (localStorage)         │ │
 │  │  - Sidebar utenti                        │ │
 │  │  - Chat pubblica/privata                 │ │
-│  │  - Polling API (/api/messages ogni 2s)  │ │
+│  │  - Polling API (/api/messages ogni 2s)   │ │
 │  └──────────────────────────────────────────┘ │
-└────────────────┬───────────────────────────────┘
+└────────────────┬──────────────────────────────┘
                  │ HTTP GET/POST
-┌────────────────▼───────────────────────────────┐
-│        ESP8266 - AsyncWebServer                │
+┌────────────────▼──────────────────────────────┐
+│        ESP8266 - AsyncWebServer               │
 │  ┌──────────────────────────────────────────┐ │
 │  │  Routes & API                            │ │
 │  │  - GET /          → Portale              │ │
@@ -107,15 +107,15 @@ SecureMesh è un sistema di comunicazione mesh decentralizzato basato su ESP8266
 │  └──────────────────────────────────────────┘ │
 │  ┌──────────────────────────────────────────┐ │
 │  │  Gestione Stato                          │ │
-│  │  - LocalUser[6]  (utenti su questo nodo)│ │
-│  │  - GlobalUser[12] (utenti rete mesh)    │ │
-│  │  - Message[15]   (buffer circolare)     │ │
-│  │  - NodeInfo[10]  (cache nodi + IP)      │ │
+│  │  - LocalUser[6]  (utenti su questo nodo) │ │
+│  │  - GlobalUser[12] (utenti rete mesh)     │ │
+│  │  - Message[15]   (buffer circolare)      │ │
+│  │  - NodeInfo[10]  (cache nodi + IP)       │ │
 │  └──────────────────────────────────────────┘ │
-└────────────────┬───────────────────────────────┘
+└────────────────┬──────────────────────────────┘
                  │ painlessMesh broadcast
-┌────────────────▼───────────────────────────────┐
-│         painlessMesh - P2P Network             │
+┌────────────────▼──────────────────────────────┐
+│         painlessMesh - P2P Network            │
 │  ┌──────────────────────────────────────────┐ │
 │  │  Messaggi Mesh (JSON)                    │ │
 │  │  - type: "chat"    → Messaggio utente    │ │
@@ -124,11 +124,11 @@ SecureMesh è un sistema di comunicazione mesh decentralizzato basato su ESP8266
 │  │  - type: "info_response" → IP + NodeID   │ │
 │  │  - type: "heartbeat"     → Keepalive     │ │
 │  └──────────────────────────────────────────┘ │
-└────────────────┬───────────────────────────────┘
+└────────────────┬──────────────────────────────┘
                  │ WiFi mesh (broadcast)
-┌────────────────▼───────────────────────────────┐
-│         Altri ESP8266 nella rete mesh          │
-└────────────────────────────────────────────────┘
+┌────────────────▼──────────────────────────────┐
+│         Altri ESP8266 nella rete mesh         │
+└───────────────────────────────────────────────┘
 ```
 
 ---
